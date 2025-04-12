@@ -1,0 +1,28 @@
+  <div class="back-btn" (click)="GoBack()"><button>Go Back</button></div>
+  <div class="main-container">
+    <div class="blog-section">
+      <h2>{{articles.title}}</h2>
+      <p>
+        {{articles.description}}
+      </p>
+    </div>
+  
+    <div class="comments-sidebar">
+      <h3 class="cmnt-title">Comments</h3>
+      <div class="comments-list">
+            @for(review of reviewModel.reviewsViews ; track $index )
+            {
+                <div class="comment-card">
+                    <p><strong>{{ review.name }}</strong></p>
+                    <p>{{ review.description }}</p>
+                </div> 
+            }
+      </div>
+  
+      <div class="comment-form">
+        <textarea [(ngModel)]="Comment" placeholder="Add a comment..."></textarea>
+        <button class="add-btn" (click)="addReview()">Add Comment</button>
+      </div>
+    </div>
+  </div>
+  

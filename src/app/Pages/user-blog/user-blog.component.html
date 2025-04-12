@@ -1,0 +1,12 @@
+<div class="user-blog-list-container">
+    @for(blog of blogs; track blog.id)
+    {
+        <section class="card">
+            <h2 (click)="viewBlog(blog.id)">{{ blog.title }}</h2>
+            <p> {{ blog.description.length > 30 ? blog.description.substring(0,30) : blog.description}}.... <a (click)="viewBlog(blog.id)">Read More</a></p>
+            <button (click)="deleteBlog(blog.id)">Delete</button>
+        </section>
+    }
+</div>
+
+<!-- ToDo Add Grid CSS LAyout of 9 card and add pagination -->

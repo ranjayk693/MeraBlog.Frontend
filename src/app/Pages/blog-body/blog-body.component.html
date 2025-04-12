@@ -1,0 +1,80 @@
+<!-- <section class="search-category">
+    <input type="text" placeholder="Search articles..." (input)="searchArticles($event)" class="search-box" />
+    <select (change)="filterByCategory($event)" class="category-dropdown">
+        <option>Select Category</option>
+        <option value="All">All</option>
+        @for(category of categories ; track category.id)
+        {
+            <option [value]="category.id">{{category.name}}</option>
+        }       
+    </select>
+</section>
+
+<div class="content">
+  <aside class="filters">
+    <h3>Filters</h3>
+    <label><input type="checkbox" (change)="filterBy('recent')" /> Recent Blogs</label>
+    <label><input type="checkbox" (change)="filterBy('category')" /> By Category</label>
+    <label><input type="checkbox" (change)="filterBy('rated')" /> Highly Rated</label>
+  </aside>
+
+  <main class="articles">
+    @for(article of articles ; track article.id)
+    {
+        <div class="card">
+            <h2>{{ article.title }}</h2>
+            <p>{{ getShortDescription(article.description) }}
+                <span class="read-more" [routerLink]="['/detail', article.id]">Read more</span>
+            </p>
+        </div>
+    }
+  </main>
+</div> -->
+
+<section class="blog-hero">
+  <div class="hero-content">
+    <h1>Explore Our Writings</h1>
+    <p>Discover insights, stories, and expert advice from our community of writers</p>
+  </div>
+</section>
+
+<div class="blog-container">
+  <!-- Filters Section -->
+  <div class="filters-section">
+    <div class="search-box">
+      <input type="text" [(ngModel)]="searchQuery" 
+             (input)="applyFilters()" 
+             placeholder="Search posts...">
+      <i class="fas fa-search"></i>
+    </div>
+
+    <div class="category-filters">
+      <div *ngFor="let category of categories" 
+           class="category-btn" 
+           [class.active]="selectedCategory === category"
+           (click)="selectedCategory = category; applyFilters()">
+        {{ category }}
+      </div>
+    </div>
+  </div>
+
+  <!-- Blog Posts Grid -->
+  <div class="blog-grid">
+    <div *ngFor="let post of filteredPosts" class="blog-card">
+      <div class="card-image" [style.backgroundImage]="'url(' + post.image + ')'"></div>
+      <div class="card-content">
+        <span class="category-tag">{{ post.category }}</span>
+        <h3>{{ post.title }}</h3>
+        <div class="post-meta">
+          <span class="author">{{ post.author }}</span>
+          <span class="date">{{ post.date | date }}</span>
+        </div>
+        <p>{{ post.content }}</p>
+        <div class="card-footer">
+          <span class="read-time">{{ post.readTime }} min read</span>
+          <button class="read-more">Read More</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

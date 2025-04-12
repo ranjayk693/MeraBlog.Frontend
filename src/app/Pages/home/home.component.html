@@ -1,0 +1,82 @@
+<!-- <div class="container">
+    <nav class="navbar">
+      <div class="logo">Mera Blog</div>
+      <button class="login-btn" [routerLink]="'/Login'">Login</button>
+    </nav>
+
+    <div class="Blog-Content">
+      <app-blog-body></app-blog-body>
+    </div>
+
+    <footer>
+      <p>Contact Us: supportmyblog.com</p>
+    </footer>
+  </div> -->
+
+  <!-- <nav class="navbar">
+    <a href="#" class="logo">InkWell</a>
+    <div class="nav-links">
+        <a href="#">Home</a>
+        <a href="#">Blog</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </div>
+</nav>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>Where Words Find Their Home</h1>
+        <p>Join a community of passionate writers and readers. Share your stories, explore new perspectives, and let your voice be heard.</p>
+        <a href="#" class="cta-button">Start Writing Now</a>
+    </div>
+</section>
+
+<section class="features">
+    <div class="features-grid">
+        <div class="feature-card">
+            <i class="fas fa-pen-nib"></i>
+            <h3>Create Beautiful Posts</h3>
+            <p>Craft your stories with our intuitive editor and rich formatting options.</p>
+        </div>
+        <div class="feature-card">
+            <i class="fas fa-users"></i>
+            <h3>Join a Community</h3>
+            <p>Connect with like-minded writers and engage in meaningful discussions.</p>
+        </div>
+        <div class="feature-card">
+            <i class="fas fa-chart-line"></i>
+            <h3>Track Your Growth</h3>
+            <p>Get insights into your readership and improve your writing skills.</p>
+        </div>
+    </div>
+</section> -->
+
+<nav class="navbar">
+  <a href="#" class="logo">MeraBlog</a>
+  <div class="nav-links">
+    <a href="#">Home</a>
+    <a href="#">Blog</a>
+    <a href="#">About</a>
+    <a href="#">Login</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-content">
+    <h1>Where Words Find Their Home</h1>
+    <p>Join a community of passionate writers and readers. Share your stories, explore new perspectives, and let your voice be heard.</p>
+    <a href="#" class="cta-button">Start Writing Now</a>
+  </div>
+</section>
+
+<section class="features">
+  <div class="features-grid">
+    @for(feature of features ; track $index) {
+      <div class="feature-card">
+        <i [class]="feature.icon"></i>
+        <h3>{{ feature.title }}</h3>
+        <p>{{ feature.description }}</p>
+      </div>
+    }
+  </div>
+</section>

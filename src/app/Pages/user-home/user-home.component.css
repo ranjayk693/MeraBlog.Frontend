@@ -1,0 +1,79 @@
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Arial', sans-serif;
+    background: #f9f9f9;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #0073e6, #005bb5);
+    color: white;
+    padding: 15px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .login-btn {
+    background: white;
+    color: #0073e6;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+  }
+  
+  footer {
+    background: #0073e6;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+    font-size: 14px;
+  }
+
+  .blog-btn{
+    /* width: 20%; */
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    align-items: center;
+    /* border: 2px solid red; */
+    /* flex-wrap: wrap; */
+  }
+  
+  .blog-btn button{
+    width: 100px;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes slideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      gap: 10px;
+      text-align: center;
+    }
+  }
+
+  .Blog-Content{
+    height: 86vh;
+  }

@@ -1,0 +1,46 @@
+
+<div class="login">
+    <div class="login-container">
+        <h2 class="form-title">Welcome to Blog Website</h2>
+
+        <form [formGroup]="loginForm" (ngSubmit)="login()">
+            <div class="input-group">
+                <input type="email" formControlName="email" required>
+                <label>Email Address</label>
+            </div>
+
+            <div class="input-group">
+                <input type="password" formControlName="password" required>
+                <label>Password</label>
+            </div>
+
+            <div class="remember-me">
+                <input type="checkbox" id="remember">
+                <label for="remember">Remember Me</label>
+            </div>
+
+            <button type="submit" class="login-btn" [disabled]="loginForm.invalid">Sign In</button>
+
+            <div class="links">
+                <a href="#">Forgot Password?</a>
+                <a [routerLink]="'/register'">Register User</a>
+            </div>
+
+            <div class="social-login">
+                <button type="button" class="social-btn google-btn" (click)="googleLogin()">
+                    <i class="fab fa-google"></i>
+                    Continue with Google
+                </button>
+                <button type="button" class="social-btn microsoft-btn" (click)="microsoftLogin()">
+                    <i class="fab fa-microsoft"></i>
+                    Continue with Microsoft
+                </button>
+                <button type="button" class="social-btn HomeBtn" [routerLink]="'/Home'">
+                    Go To Home
+                </button>
+            </div>
+        </form>
+        <div>
+        </div>
+    </div>
+</div>
