@@ -1,11 +1,8 @@
 import { Component, HostListener } from '@angular/core';
-import { Router, RouterLink, RouterOutlet } from '@angular/router';
-import { BlogBodyComponent } from "../blog-body/blog-body.component";
-import { BlogDetailComponent } from '../blog-detail/blog-detail.component';
 
 @Component({
   selector: 'app-home',
-  imports: [RouterLink, BlogBodyComponent,],
+  imports: [],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })

@@ -1,11 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonService } from '../../Services/common.service';
-import { ApiUrlService } from '../../ApiUrl/api-url.service';
-import { DataService } from '../../Services/data.service';
-import { BlogView } from '../../Models/blog-view';
-import { Categories } from '../../Models/Categories';
 import { CommonModule } from '@angular/common';
-import { RouterLink } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 
 export interface BlogPost {
@@ -20,7 +15,7 @@ export interface BlogPost {
 }
 @Component({
   selector: 'app-blog-body',
-  imports: [CommonModule, RouterLink, FormsModule],
+  imports: [CommonModule, FormsModule],
   templateUrl: './blog-body.component.html',
   styleUrl: './blog-body.component.css'
 })
